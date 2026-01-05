@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Image: Fastest AI Image Generator for Free</title>
+    <meta name="description" content="Z-Image is a highly efficient 6-billion-parameter image generation model built on a single-stream diffusion transformer, enabling inference in less than a second.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Z-Image: Fastest AI Image Generator for Free">
+    <meta property="og:description" content="Z-Image is a highly efficient 6-billion-parameter image generation model built on a single-stream diffusion transformer, enabling inference in less than a second.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero-bg.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Z-Image: Fastest AI Image Generator for Free">
+    <meta name="twitter:description" content="Z-Image is a highly efficient 6-billion-parameter image generation model built on a single-stream diffusion transformer, enabling inference in less than a second.">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Zimage Ai</div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#playground">Generator</a>
+            <a href="#features">Features</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#how-to-use">How it Works</a>
+            <a href="#playground" class="btn btn-sm btn-primary">Generate</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <!-- Layer 1: Background Image -->
+        <div class="hero-bg-image">
+            <img src="images/hero-bg.jpg" alt="Futuristic digital void with scanning grid">
+        </div>
+        
+        <!-- Layer 2: Animation Overlay -->
+        <div class="hero-bg-animation">
+            <!-- Grid lines generated via CSS background -->
+            <div class="scan-line"></div>
+        </div>
+        
+        <!-- Layer 3: Dark Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Layer 4: Content -->
+        <div class="hero-content">
+            <h1>Z-Image - Free AI Image Generator</h1>
+            <p>Z-Image helps you convert your text into detailed images using an efficient AI model built for speed and quality.</p>
+            <div>
+                <a href="#playground" class="btn btn-primary">Generate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sub Features (Key Features) -->
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features of Z-Image</h2>
+            </div>
+            <div class="features-grid bento-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-image">
+                        <img src="images/feature-speed.jpg" alt="Ultra-Fast Generation Speed">
+                    </div>
+                    <h3>Ultra-Fast Generation Speed</h3>
+                    <p>Z-Image delivers very low-latency image generation, enabling near real-time results and rapid creative iteration without long waiting times.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-image">
+                        <img src="images/feature-arch.jpg" alt="Efficient Architecture">
+                    </div>
+                    <h3>Efficient Architecture</h3>
+                    <p>Built on a 6-billion-parameter architecture, Z-Image balances strong visual quality with efficient performance on accessible hardware.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-image">
+                        <img src="images/feature-stream.jpg" alt="Single-Stream Diffusion Transformer">
+                    </div>
+                    <h3>Single-Stream Diffusion Transformer</h3>
+                    <p>Z-Image processes text and image data in one unified stream, improving consistency, coherence, and prompt alignment in generated outputs.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-card glass-panel">
+                    <div class="feature-image">
+                        <img src="images/feature-quality.jpg" alt="High-Quality Photorealistic Outputs">
+                    </div>
+                    <h3>High-Quality Photorealistic Outputs</h3>
+                    <p>The model produces sharp, realistic visuals with detailed textures, balanced lighting, and natural compositions across a wide range of styles.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="feature-card glass-panel wide">
+                    <div class="feature-image">
+                        <img src="images/feature-prompt.jpg" alt="Strong Prompt Understanding">
+                    </div>
+                    <h3>Strong Prompt Understanding</h3>
+                    <p>Z-Image interprets complex descriptions accurately, maintaining structure and creative intent while following detailed user instructions closely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playground Section -->
+    <section id="playground">
+        <div class="container playground-container">
+            <div class="section-header">
+                <h2>Z-Image - Text to Image Generator</h2>
+                <p>Z-Image uses an efficient single-stream architecture to create fast, photorealistic images from detailed text prompts.</p>
+            </div>
+            
+            <div class="playground-grid">
+                <!-- Left: Upload Panel -->
+                <div class="playground-panel upload-panel">
+                    <div class="panel-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <h4>INPUT_SOURCE</h4>
+                    </div>
+                    <div class="upload-zone" id="upload-zone">
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                        <div class="upload-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 16l4-4 4 4m4-4l4 4M4 12V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6"/>
+                            </svg>
+                            <p>Drag & drop or click to upload</p>
+                            <span>PNG, JPG up to 10MB</span>
+                        </div>
+                        <img id="preview-image" class="hidden" alt="Preview">
+                    </div>
+                    <div class="playground-actions">
+                        <button class="btn btn-primary" id="generate-btn" disabled>Generate</button>
+                        <button class="btn btn-secondary" id="reset-btn">Reset</button>
+                    </div>
+                </div>
+                
+                <!-- Right: Result Panel -->
+                <div class="playground-panel result-panel">
+                    <div class="panel-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <h4>OUTPUT_RENDER</h4>
+                    </div>
+                    <div class="result-display" id="result-container">
+                        <div class="result-placeholder" id="result-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15l-5-5L5 21"/>
+                            </svg>
+                            <p>Result will appear here</p>
+                        </div>
+                        <div class="loading-overlay hidden" id="loading-state">
+                            <div class="loading-spinner"></div>
+                            <p id="loading-text" class="typewriter">PROCESSING_DATA...</p>
+                        </div>
+                        <img id="result-image" class="hidden" alt="Result">
+                    </div>
+                    <div class="playground-actions">
+                        <button class="btn btn-primary" id="download-btn" disabled>Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-to-use">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Z-Image Works?</h2>
+            </div>
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                    </div>
+                    <h3>Describe your image</h3>
+                    <p>Enter a clear text prompt explaining the scene, style, subject, and details you want Z-Image to generate.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Generate the image</h3>
+                    <p>Click on Generate button to Z-Image processes your prompt using its single-stream diffusion transformer to create a realistic, high-quality image.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <h3>Download and share</h3>
+                    <p>Preview the final result, then download your image and use it in projects, social media, or creative workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Generated Gallery</h2>
+                <p>Explore what's possible with Z-Image</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery-1.jpg" alt="Cyberpunk street samurai">
+                    <div class="gallery-overlay">
+                        <span>Cyberpunk street samurai portrait</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-2.jpg" alt="Futuristic solar punk city">
+                    <div class="gallery-overlay">
+                        <span>Futuristic solar punk city</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-3.jpg" alt="Surreal digital art">
+                    <div class="gallery-overlay">
+                        <span>Surreal digital art</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Use -->
+    <section id="why-use" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Users Trust Z-Image</h2>
+                <p>Discover the key features that make our Z-Image tool the perfect choice for creating stunning visuals effortlessly.</p>
+            </div>
+            <div class="grid-2">
+                <div class="card box-feature">
+                    <h3>Instant Results</h3>
+                    <p>Write a detailed description of what you want to create. AI handles everything for you. No editing or design skills are needed.</p>
+                </div>
+                <div class="card box-feature">
+                    <h3>Secure and Private</h3>
+                    <p>Your privacy is our priority. Every image is processed securely, ensuring your data remains confidential and is never shared with third parties.</p>
+                </div>
+                <div class="card box-feature">
+                    <h3>High-Quality Outputs</h3>
+                    <p>Enjoy high-quality results with exceptional clarity, detail, and color accuracy in every Z-Image output you generate.</p>
+                </div>
+                <div class="card box-feature">
+                    <h3>Completely Free to Use</h3>
+                    <p>Access all features without any cost. There are no hidden fees, just unlimited creativity with zero restrictions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What People Say about us</h2>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Review 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="images/testimonial-emily.jpg" alt="Emily" class="testimonial-avatar">
+                        <div>
+                            <h4>Emily</h4>
+                            <span class="testimonial-role">Digital Artist</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Z-Image delivers incredibly realistic images from my prompts faster than any other tool I’ve used."</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="images/testimonial-michael.jpg" alt="Michael" class="testimonial-avatar">
+                        <div>
+                            <h4>Michael</h4>
+                            <span class="testimonial-role">Creative Director</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"The speed and quality are outstanding. Z-Image has become my go-to model for rapid creative work."</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="images/testimonial-sophia.jpg" alt="Sophia" class="testimonial-avatar">
+                        <div>
+                            <h4>Sophia</h4>
+                            <span class="testimonial-role">Content Designer</span>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"I love how accurately it follows complex prompts while still producing natural, photorealistic results."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs">
+        <div class="container">
+            <div class="section-header">
+                <h2>FAQs About Z-Image</h2>
+            </div>
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is Z-Image?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Z-Image is a 6B parameter AI image generation foundation model that uses a single-stream diffusion transformer to create high-quality visuals from text prompts.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Z-Image free to use?
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can start using Z-Image for free, allowing you to explore its features at no cost.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is Z-Image in following prompts?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Z-Image demonstrates strong prompt understanding and follows detailed instructions well, making it suitable for structured and creative image tasks.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What type of images can Z-Image create?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Z-Image can generate a wide range of images including portraits, product visuals, artistic renders, and creative concepts with realistic detail.</p>
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What hardware is required to run Z-Image?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Z-Image is designed to run efficiently and can operate on consumer-grade GPUs, making it accessible to individuals, developers, and small teams.</p>
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does Z-Image generate realistic images?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Z-Image is capable of producing highly realistic images with natural lighting and detailed textures, especially for portrait and real-world scenes.</p>
+                    </div>
+                </div>
+                <!-- FAQ 7 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Z-Image open source?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, Z-Image is open source and freely available under the Apache 2.0 license, giving users flexibility and freedom in development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">Zimage Ai</div>
+                <p>Fastest AI Image Generator using single-stream diffusion transformer technology.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#playground">Generator</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#how-to-use">How to Use</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#why-use">Benefits</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#" data-modal-target="privacy-modal">Privacy Policy</a></li>
+                    <li><a href="#" data-modal-target="terms-modal">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Zimage Ai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Privacy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Privacy Policy</h3>
+                <button class="close-modal" data-modal-close="privacy-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Last Updated:</strong> 2024</p>
+                <h4>1. Data Collection</h4>
+                <p>We collect only the minimum data necessary:</p>
+                <ul>
+                    <li>Images you upload for processing (temporarily stored)</li>
+                    <li>Basic usage analytics (non-personal)</li>
+                    <li>Browser type and device information</li>
+                </ul>
+                <h4>2. Image Processing</h4>
+                <p>Your uploaded images are:</p>
+                <ul>
+                    <li>Processed securely on our servers</li>
+                    <li>Automatically deleted within 24 hours</li>
+                    <li>Never shared with third parties</li>
+                    <li>Not used for AI training without consent</li>
+                </ul>
+                <h4>3. Data Security</h4>
+                <p>All data transmission is encrypted using SSL/TLS protocols.</p>
+                <h4>4. Cookies</h4>
+                <p>We use essential cookies only for site functionality.</p>
+                <h4>5. Your Rights</h4>
+                <p>You have the right to request deletion of any stored data.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Terms of Service</h3>
+                <button class="close-modal" data-modal-close="terms-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Last Updated:</strong> 2024</p>
+                <h4>1. Acceptance of Terms</h4>
+                <p>By using this service, you agree to these Terms.</p>
+                <h4>2. Service Description</h4>
+                <p>This service provides AI-powered image transformation. Provided "as-is" without warranties.</p>
+                <h4>3. Acceptable Use</h4>
+                <p>You agree NOT to upload:</p>
+                <ul>
+                    <li>Illegal or unlawful content</li>
+                    <li>Explicit, pornographic, or obscene material</li>
+                    <li>Content depicting violence or harm</li>
+                    <li>Images you do not have rights to use</li>
+                </ul>
+                <h4>4. Intellectual Property</h4>
+                <p>You retain full ownership of your original images. Generated effects are royalty-free for personal and commercial use.</p>
+                <h4>5. Limitation of Liability</h4>
+                <p>We are not liable for any damages arising from the use of this service.</p>
+                <h4>6. Modifications</h4>
+                <p>We may update these terms at any time. Continued use constitutes acceptance.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
