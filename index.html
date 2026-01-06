@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z-Image: Fastest AI Image Generator for Free</title>
-    <meta name="description" content="Z-Image is a highly efficient 6-billion-parameter image generation model built on a single-stream diffusion transformer, enabling inference in less than a second.">
+    <meta name="description" content="Z-Image is a powerful 6B-parameter image generation model that uses a diffusion transformer to create images in seconds. Free to use with no sign-up.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,14 +19,14 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="Z-Image: Fastest AI Image Generator for Free">
-    <meta property="og:description" content="Z-Image is a highly efficient 6-billion-parameter image generation model built on a single-stream diffusion transformer, enabling inference in less than a second.">
+    <meta property="og:description" content="Z-Image is a powerful 6B-parameter image generation model that uses a diffusion transformer to create images in seconds. Free to use with no sign-up.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/hero-bg.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Z-Image: Fastest AI Image Generator for Free">
-    <meta name="twitter:description" content="Z-Image is a highly efficient 6-billion-parameter image generation model built on a single-stream diffusion transformer, enabling inference in less than a second.">
+    <meta name="twitter:description" content="Z-Image is a powerful 6B-parameter image generation model that uses a diffusion transformer to create images in seconds. Free to use with no sign-up.">
 </head>
 <body>
 
@@ -63,7 +63,7 @@
         <!-- Layer 4: Content -->
         <div class="hero-content">
             <h1>Z-Image - Free AI Image Generator</h1>
-            <p>Z-Image helps you convert your text into detailed images using an efficient AI model built for speed and quality.</p>
+            <p>Z-Image helps you convert your text into detailed images using an efficient AI model built for speed and quality. Try it free for below!</p>
             <div>
                 <a href="#playground" class="btn btn-primary">Generate</a>
             </div>
@@ -121,67 +121,25 @@
         </div>
     </section>
 
-    <!-- Playground Section -->
+    <!-- Playground Section (LOCKED) -->
     <section id="playground">
-        <div class="container playground-container">
+        <div class="container">
             <div class="section-header">
                 <h2>Z-Image - Text to Image Generator</h2>
                 <p>Z-Image uses an efficient single-stream architecture to create fast, photorealistic images from detailed text prompts.</p>
             </div>
-            
-            <div class="playground-grid">
-                <!-- Left: Upload Panel -->
-                <div class="playground-panel upload-panel">
-                    <div class="panel-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                        <h4>INPUT_SOURCE</h4>
-                    </div>
-                    <div class="upload-zone" id="upload-zone">
-                        <input type="file" id="file-input" accept="image/*" hidden>
-                        <div class="upload-placeholder">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M4 16l4-4 4 4m4-4l4 4M4 12V6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6"/>
-                            </svg>
-                            <p>Drag & drop or click to upload</p>
-                            <span>PNG, JPG up to 10MB</span>
-                        </div>
-                        <img id="preview-image" class="hidden" alt="Preview">
-                    </div>
-                    <div class="playground-actions">
-                        <button class="btn btn-primary" id="generate-btn" disabled>Generate</button>
-                        <button class="btn btn-secondary" id="reset-btn">Reset</button>
-                    </div>
+
+            <!-- LOCKED STATE PLAYGROUND -->
+            <div class="playground-locked-card card-glass">
+                <div class="lock-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lock-icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                 </div>
-                
-                <!-- Right: Result Panel -->
-                <div class="playground-panel result-panel">
-                    <div class="panel-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                        <h4>OUTPUT_RENDER</h4>
-                    </div>
-                    <div class="result-display" id="result-container">
-                        <div class="result-placeholder" id="result-placeholder">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <circle cx="8.5" cy="8.5" r="1.5"/>
-                                <path d="M21 15l-5-5L5 21"/>
-                            </svg>
-                            <p>Result will appear here</p>
-                        </div>
-                        <div class="loading-overlay hidden" id="loading-state">
-                            <div class="loading-spinner"></div>
-                            <p id="loading-text" class="typewriter">PROCESSING_DATA...</p>
-                        </div>
-                        <img id="result-image" class="hidden" alt="Result">
-                    </div>
-                    <div class="playground-actions">
-                        <button class="btn btn-primary" id="download-btn" disabled>Download</button>
-                    </div>
+                <h3>Effect Lab Locked</h3>
+                <p>Z-Image Model is under development.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%"></div>
                 </div>
+                <p class="progress-text">Development Progress: 75%</p>
             </div>
         </div>
     </section>
